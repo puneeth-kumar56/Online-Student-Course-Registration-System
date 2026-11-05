@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Add Student</title>
+    <title>Course Registration</title>
 </head>
 <body>
 
-<h2>Add Student Details</h2>
+<h2>Student Course Registration</h2>
+
+<h3>Course: {{ course.course_name }}</h3>
 
 <form method="POST">
 
-    Name:
+    Student Name:
     <input type="text" name="name" required>
     <br><br>
 
@@ -17,15 +19,13 @@
     <input type="email" name="email" required>
     <br><br>
 
-    Course:
-    <input type="text" name="course" required>
-    <br><br>
-
-    <button type="submit">Save Student</button>
+    <button type="submit">Register Course</button>
 
 </form>
 
-<a href="/">Back</a>
+<br>
+
+<a href="/">Back to Courses</a>
 
 </body>
 </html>

@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Student Management System</title>
+    <title>Online Course Registration</title>
 </head>
 <body>
 
-<h2>Student Information Management System</h2>
+<h2>Online Student Course Registration System</h2>
 
-<a href="/add">Add New Student</a>
+<h3>Available Courses</h3>
 
 <table border="1" cellpadding="10">
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Course</th>
-        <th>Action</th>
-    </tr>
 
-    {% for student in students %}
-    <tr>
-        <td>{{ student.id }}</td>
-        <td>{{ student.name }}</td>
-        <td>{{ student.email }}</td>
-        <td>{{ student.course }}</td>
-        <td>
-            <a href="/delete/{{ student.id }}">Delete</a>
-        </td>
-    </tr>
-    {% endfor %}
+<tr>
+    <th>ID</th>
+    <th>Course Name</th>
+    <th>Duration</th>
+    <th>Action</th>
+</tr>
+
+{% for course in courses %}
+<tr>
+    <td>{{ course.id }}</td>
+    <td>{{ course.course_name }}</td>
+    <td>{{ course.duration }}</td>
+    <td>
+        <a href="/register/{{ course.id }}">Register</a>
+    </td>
+</tr>
+{% endfor %}
 
 </table>
+
+<br>
+
+<a href="/registrations">View Registrations</a>
 
 </body>
 </html>
